@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f3eb">
+  <meta name="description" content="Oksana Magic Felt — авторські вироби з вовни, створені вручну з теплом і любов'ю.">
+  <title>Oksana Magic Felt — Handmade with Love</title>
+  <style>
+    :root {
+      --cream: #f8f3eb;
+      --paper: #fffdf9;
+      --brown: #594638;
+      --muted: #887969;
+      --green: #69775b;
+      --line: #e8ded1;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 82px 0 76px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font: 11px Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1.08;
+      font-weight: normal;
+      margin: 20px 0;
+    }
+
+    h1 span { color: var(--green); font-style: italic; }
+
+    .hero p {
+      max-width: 540px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 3px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font: 13px Arial, sans-serif;
+      transition: background .2s, transform .2s;
+    }
+
+    .button:hover {
+      background: #526148;
+      transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--brown);
+      border: 1px solid var(--line);
+    }
+
+    .hero-note {
+      margin-top: 32px;
+      color: #a39382;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    section { padding: 65px 0; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 5vw, 43px);
+      font-weight: normal;
+      margin: 8px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .work {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .work-art {
+      aspect-ratio: 4 / 4.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      background: #e9e1d5;
+      color: #786b5c;
+      font-size: 58px;
+    }
+
+    .work:nth-child(2) .work-art { background: #e2e6d9; }
+    .work:nth-child(3) .work-art { background: #f0e1d9; }
+
+    .work-art small {
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1.5px;
+    }
+
+    .work-info { padding: 18px; }
+
+    .work-info h3 {
+      margin: 0 0 5px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .work-info p {
+      color: var(--muted);
+      margin: 0;
+      font: 13px/1.6 Arial, sans-serif;
+    }
+
+    .about {
+      background: #eeeadf;
+      text-align: center;
+    }
+
+    .about-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .about h2, .contact h2 {
+      font-size: clamp(32px, 5vw, 46px);
+      font-weight: normal;
+      margin: 10px 0 18px;
+    }
+
+    .about p {
+      color: #786b5c;
+      font-size: 17px;
+    }
+
+    .contact { text-align: center; }
+
+    .contact p {
+      color: var(--muted);
+      margin: 0 auto 25px;
+      max-width: 490px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      text-align: center;
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+    }
+
+    @media (max-width: 700px) {
+      .hero { padding: 62px 0; }
+      .gallery { grid-template-columns: 1fr; gap: 16px; }
+      .work-art { aspect-ratio: 5 / 3; }
+      section { padding: 48px 0; }
+      .brand { font-size: 17px; }
+      .nav-link { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Oksana Magic Felt</div>
+      <a class="nav-link" href="#gallery">НАШІ РОБОТИ ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Handmade with love</div>
+        <h1>Трохи магії.<br><span>Багато душі.</span></h1>
+        <p>
+          Авторські вироби з вовни, створені вручну.
+          Маленькі речі, у яких живуть тепло, характер і любов до деталей.
+        </p>
+        <a class="button" href="#gallery">Відкрити галерею</a>
+        <div class="hero-note">ТЕПЛО РУЧНОЇ РОБОТИ · У КОЖНІЙ ДЕТАЛІ</div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Made by hand</div>
+          <h2>Наші роботи</h2>
+          <p>Кожен виріб має свій характер та історію.</p>
+        </div>
+
+        <div class="gallery">
+          <article class="work">
+            <div class="work-art" aria-label="Тимчасова ілюстрація">
+              🧸
+              <small>ТУТ БУДЕ ФОТО</small>
+            </div>
+            <div class="work-info">
+              <h3>Маленькі дива</h3>
+              <p>Вироби ручної роботи з увагою до кожної деталі.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-art" aria-label="Тимчасова ілюстрація">
+              🌿
+              <small>ТУТ БУДЕ ФОТО</small>
+            </div>
+            <div class="work-info">
+              <h3>Тепло природи</h3>
+              <p>Натуральні відтінки та затишний настрій.</p>
+            </div>
+          </article>
+
+          <article class="work">
+            <div class="work-art" aria-label="Тимчасова ілюстрація">
+              🐑
+              <small>ТУТ БУДЕ ФОТО</small>
+            </div>
+            <div class="work-info">
+              <h3>Створено з любов'ю</h3>
+              <p>Особливі речі, зроблені вручну, а не на конвеєрі.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap about-inner">
+        <div class="eyebrow">A little about us</div>
+        <h2>Ручна робота — це більше, ніж річ</h2>
+        <p>
+          Oksana Magic Felt — це творчість, терпіння та любов до своєї справи.
+          Кожен виріб створюється вручну, тому має власний настрій
+          і неповторні деталі.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="wrap">
+        <div class="eyebrow">Let's keep in touch</div>
+        <h2>Зазирніть у наш світ</h2>
+        <p>
+          Більше виробів, нові роботи та творчий процес —
+          на нашій сторінці в Instagram.
+        </p>
+        <a
+          class="button"
+          href="https://www.instagram.com/oksana_magic_felt/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Дивитися в Instagram ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Oksana Magic Felt · Handmade with love
+    </div>
+  </footer>
+</body>
+</html>
